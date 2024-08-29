@@ -87,3 +87,50 @@ Angular lifecycle hooks are special methods that Angular calls at specific point
 6. ngAfterViewInit: Called once after the first ngAfterContentChecked
 7. ngAfterViewChecked: Called after ngAfterViewInit and every subsequent ngAfterContentChecked.
 8. ngOnDestroy: Called just before Angular destroys the component.
+
+
+==> What is Angular?
+* Angular is a TypeScript-based front-end web application framework.
+* It’s used for designing single-page applications (SPAs) and offers features like components, services, modules, and routing.
+
+==> How does an Angular application work?
+* Every Angular app has an angular.json file that contains configurations. The builder looks at this file to find the entry point of the application.
+* The entry point is usually the main.ts file, where Angular bootstraps the app by calling platformBrowserDynamic().bootstrapModule(AppModule).
+
+==> What are Angular components?
+* Components are the building blocks of an Angular app. They encapsulate HTML, CSS, and logic.
+* To create a component, use the Angular CLI command: ng generate component component-name.
+
+==> What is data binding in Angular?
+* Data binding connects the UI (template) with the component’s data. Types of data binding: Interpolation, Property binding, Event binding, and Two-way binding.
+
+==> What is Angular CLI?
+* Angular CLI (Command Line Interface) is a powerful tool for creating, managing, and building Angular projects.
+* Use ng new to create a new project and ng serve to run it locally.
+
+==> What is lazy loading in Angular?
+* Lazy loading loads modules only when needed, improving app performance.
+* Use the loadChildren property in the route configuration to enable lazy loading.
+
+==> What is Angular service?
+* Services provide reusable logic and data to components.
+* Create a service using ng generate service service-name.
+
+==> What is dependency injection in Angular?
+* Dependency injection (DI) is a design pattern where components receive their dependencies from an external source (usually a service).
+* Angular’s DI system manages the injection of services into components.
+
+==> How do you handle HTTP requests in Angular?
+* Use Angular’s HttpClientModule to make HTTP requests.
+Example:
+TypeScript
+import { HttpClient } from '@angular/common/http';
+constructor(private http: HttpClient) {
+  this.http.get('https://api.example.com/data').subscribe(response => {
+    console.log(response);
+  });
+}
+
+==> What are Angular directives?
+* Directives are instructions in the DOM. Examples: *ngFor, *ngIf, and custom directives.
+* Custom directives can be created using @Directive decorator.
