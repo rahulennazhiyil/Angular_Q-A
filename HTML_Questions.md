@@ -1,5 +1,5 @@
-HTML5
------
+HTML5 Questions
+--------------
 
 ==> What is the difference between <section> and <div> elements?
 *  <section> is a thematic grouping of content, while <div> is a generic container. Use <section> for meaningful content sections.
