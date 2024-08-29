@@ -97,3 +97,68 @@ Question 9: What is the find method used for?
 
 Question 10: What is the findIndex method used for?
 *  The findIndex method returns the index of the first element in the array that passes a test implemented by a provided function.
+
+Core JavaScript Concepts
+------------------------
+Variable Declaration:
+=====================
+
+Declare variables using var, let, and const. Explain their differences and when to use each.
+Data Types:
+
+Identify the different data types in JavaScript (numbers, strings, booleans, objects, arrays, null, undefined).
+Explain the difference between primitive values and objects.
+Operators:
+
+Demonstrate understanding of arithmetic, comparison, logical, assignment, and ternary operators.
+Write code examples using these operators.
+Control Flow:
+
+Implement if, else, else if, switch, for, while, and do...while statements.
+Solve problems using these control flow constructs.
+Functions:
+
+Define and call functions with parameters and return values.
+Explain the concept of closures and provide an example.
+Objects:
+
+Create objects using object literal notation and constructor functions.
+Access and modify object properties.
+Arrays:
+
+Create and manipulate arrays using methods like push, pop, shift, unshift, slice, splice, concat, join, and reverse.
+Implement array iteration using forEach, map, filter, and reduce.
+DOM Manipulation
+Selecting Elements:
+
+Use getElementById, getElementsByTagName, getElementsByClassName, and querySelector to select elements.
+Modifying Elements:
+
+Change element attributes, content, and styles using JavaScript.
+Event Handling:
+
+Add event listeners to elements and handle events like clicks, mouseovers, and keypresses.
+Asynchronous Programming
+Callbacks:
+
+Write code using callbacks to handle asynchronous operations.
+Promises:
+
+Create and use promises to manage asynchronous code.
+Implement then, catch, and finally methods.
+Async/Await:
+
+Use async and await to write asynchronous code in a more synchronous-like manner.
+Additional Topics
+JSON:
+
+Parse and stringify JSON data.
+Regular Expressions:
+
+Use regular expressions to match and manipulate text patterns.
+Error Handling:
+
+Implement try...catch blocks to handle errors.
+Modules:
+
+Use CommonJS or ES modules to organize code into separate files.
