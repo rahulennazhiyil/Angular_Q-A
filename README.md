@@ -135,6 +135,19 @@ constructor(private http: HttpClient) {
 * Directives are instructions in the DOM. Examples: *ngFor, *ngIf, and custom directives.
 * Custom directives can be created using @Directive decorator.
 
+==> What is the purpose of the @Input and @Output decorators?
+* @Input is used to pass data from parent to child components, 
+* while @Output is used to emit events from child to parent components.
+
+==> How do you pass data from a parent to a child component?
+* Use the @Input decorator on the child component's property. 
+
+==> What is lazy Loading?
+* Lazy Loading in Angular refers to a technique where components or modules are only loaded when they are needed, 
+rather than all at once when the application initially starts. This can significantly improve performance,
+ especially for larger applications with many components.
+
+
 
 BASIC COMMANDS USED IN ANGULAR
 ------------------------------
