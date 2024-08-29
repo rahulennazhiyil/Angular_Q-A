@@ -149,4 +149,5 @@ BASIC COMMANDS USED IN ANGULAR
 ==> Creates a new component.
 ** ng generate service my-service: 
 ==> Generates a new service.
-** ng build: Compiles your application into an output directory (usually dist/). Use the --prod flag for production builds.
+** ng build: 
+==> Compiles your application into an output directory (usually dist/). Use the --prod flag for production builds.
