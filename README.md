@@ -134,3 +134,19 @@ constructor(private http: HttpClient) {
 ==> What are Angular directives?
 * Directives are instructions in the DOM. Examples: *ngFor, *ngIf, and custom directives.
 * Custom directives can be created using @Directive decorator.
+
+
+BASIC COMMANDS USED IN ANGULAR
+------------------------------
+
+** ng new <project-name>: 
+==> Creates a new Angular workspace and generates a new application skeleton. Replace <project-name> with your desired project name.
+** ng serve:
+==> Builds and serves your Angular application locally. It automatically rebuilds the app and reloads the page when you make changes to the source files. Access it at http://localhost:4200/.
+** ng generate <schematic>:
+==>  Generates various parts of your application, such as components, services, modules, and more. For example:
+** ng generate component my-component: 
+==> Creates a new component.
+** ng generate service my-service: 
+==> Generates a new service.
+** ng build: Compiles your application into an output directory (usually dist/). Use the --prod flag for production builds.
