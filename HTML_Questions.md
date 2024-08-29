@@ -1,7 +1,7 @@
 HTML5 Questions
 --------------
 
-==> What is the difference between <section> and <div> elements?
+==> What is the difference between Section and Div elements?
 *  <section> is a thematic grouping of content, while <div> is a generic container. Use <section> for meaningful content sections.
 
 ==> Explain the purpose of the <article> element.
@@ -13,16 +13,16 @@ HTML5 Questions
 Semantic Elements and Accessibility
 -----------------------------------
 
-==> What is the purpose of the <nav> element, and when should it be used?
+==> What is the purpose of the nav element, and when should it be used?
 *  The <nav> element is used to define navigation links. It should be used for primary navigation elements within a web page.
 
 ==> Explain the importance of using ARIA attributes for accessibility.
 *  ARIA (Accessible Rich Internet Applications) attributes provide additional information about the role, state, and properties of elements, making them accessible to assistive technologies like screen readers.
 
-==> What is the difference between <header> and <footer> elements?
+==> What is the difference between header and <footer> elements?
 * 
-<header> is used for a page's introductory content, often containing a logo, navigation, or search bar.
-<footer> is used for a page's footer content, typically including copyright information, contact details, or site navigation.
+header is used for a page's introductory content, often containing a logo, navigation, or search bar.
+footer is used for a page's footer content, typically including copyright information, contact details, or site navigation.
 
 Forms and Input Types
 ---------------------
@@ -42,11 +42,11 @@ Multimedia
 <picture> is used to provide multiple image sources for different screen sizes or devices, improving performance and responsiveness.
 
 ==> How do you embed a video in an HTML page using HTML5?
-*  Use the <video> element with appropriate source attributes.
+*  Use the video element with appropriate source attributes.
 
 Other Features
 --------------
-==> What is the purpose of the <canvas> element?
+==> What is the purpose of the canvas element?
 *  The <canvas> element is used to draw graphics dynamically using JavaScript.
 
 ==> What is the difference between <audio> and <source> elements?
