@@ -4,11 +4,11 @@ HTML5 Questions
 ==> What is the difference between Section and Div elements?
 *  <section> is a thematic grouping of content, while <div> is a generic container. Use <section> for meaningful content sections.
 
-==> Explain the purpose of the <article> element.
-*  <article> represents an independent item of content that can be syndicated or reused.
+==> Explain the purpose of the article element.
+*  article represents an independent item of content that can be syndicated or reused.
 
 ==> What are the different types of input elements in HTML5?
-*  <input> elements can be used for text, numbers, checkboxes, radio buttons, date/time selection, and more.
+*  input elements can be used for text, numbers, checkboxes, radio buttons, date/time selection, and more.
 
 Semantic Elements and Accessibility
 -----------------------------------
