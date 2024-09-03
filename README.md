@@ -164,3 +164,60 @@ BASIC COMMANDS USED IN ANGULAR
 ==> Generates a new service.
 * ng build: 
 ==> Compiles your application into an output directory (usually dist/). Use the --prod flag for production builds.
+
+Technical Questions
+===================
+
+==> What is Angular, and how does it differ from other frameworks like React or Vue?
+*  Angular is a TypeScript-based open-source web application framework developed by Google. It is a full-fledged framework, offering a complete solution for building dynamic, single-page applications. Unlike React, which is a library focused on UI, Angular provides a more opinionated architecture with features like dependency injection, two-way data binding, and a powerful CLI for project management. Vue, on the other hand, is more flexible and easier to integrate into projects incrementally, whereas Angular is more suited for larger applications.
+
+==> How do you handle state management in Angular applications?
+*  In Angular, state management can be handled using various approaches depending on the application's complexity. For simpler applications, services can be used to manage and share state between components. For more complex applications, state management libraries like NgRx can be used, which follows the Redux pattern. NgRx allows for centralized management of application state and provides powerful tools like actions, reducers, and selectors to manage state changes predictably.
+
+==> Can you explain how Angular's dependency injection works?
+*  Angular's dependency injection (DI) system is a core feature that allows classes and components to request dependencies from an injector rather than creating them directly. The DI system makes it easier to manage code, especially in larger applications, by allowing dependencies to be injected into components and services. This promotes better code organization and facilitates testing by enabling mock dependencies.
+
+==> What are Angular modules, and why are they important?
+*  Angular modules (NgModules) are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities. Every Angular application has at least one module, the root module, which is bootstrapped to launch the application. NgModules help organize an application into cohesive blocks of functionality and allow for lazy loading of features, improving performance.
+
+==> How do you optimize the performance of an Angular application?
+*  Optimizing the performance of an Angular application can be achieved through various techniques:
+* Lazy loading modules to reduce initial load time.
+* AOT (Ahead of Time) compilation to reduce the size of the compiled code.
+* Using Angular's built-in change detection strategy to minimize unnecessary checks.
+* Leveraging the OnPush change detection strategy for components that rely on immutable data.
+* Minimizing the use of global variables and DOM manipulation.
+* Using Angular CLI's production build configuration, which includes tree-shaking, minification, and other optimizations.
+
+==> How do you implement responsive design in Angular?
+*  Responsive design in Angular can be implemented using CSS frameworks like Bootstrap or by leveraging Angular's built-in features like Angular Flex Layout. Media queries can also be used to apply styles conditionally based on the device's screen size. Additionally, Angular Material provides responsive components that adapt to various screen sizes.
+
+Behavioral and Problem-Solving Questions
+----------------------------------------
+
+==> Describe a challenging problem you faced in your previous Angular project and how you solved it.
+*  In one of my recent projects, I faced a challenge with managing complex state across multiple components. The application was becoming difficult to manage as the state grew larger and more intricate. I solved this by introducing NgRx for state management, which allowed me to centralize the state and manage it predictably. I defined actions, reducers, and selectors to handle state changes, which significantly improved the code's maintainability and scalability.
+
+==> How do you ensure the quality of your code in Angular projects?
+*  I ensure code quality by adhering to best practices like writing modular and reusable code, following Angular's style guide, and conducting thorough unit testing using Jasmine and Karma. I also participate in regular code reviews with the team, where we provide constructive feedback and catch potential issues early. Additionally, I make use of tools like ESLint for linting and Prettier for formatting to maintain a consistent code style.
+
+==> How do you stay up-to-date with the latest trends and updates in Angular development?
+*  I stay updated with the latest trends in Angular by following official Angular blog posts, attending webinars and conferences, participating in online communities like Stack Overflow and Reddit, and reading articles on platforms like Medium. I also experiment with new features in personal projects to gain hands-on experience.
+
+==> Can you explain a situation where you had to work closely with designers or back-end developers?
+*  In one of my projects, I worked closely with designers to implement a pixel-perfect UI based on their design specifications. This required constant communication to ensure that the design was accurately translated into code while maintaining responsiveness across devices. I also collaborated with back-end developers to integrate RESTful APIs, ensuring that the data was correctly fetched and displayed on the front end.
+
+Conceptual Questions
+--------------------
+
+==> What are some common security practices you follow in Angular development?
+*  Common security practices in Angular include:
+* Avoiding direct use of the innerHTML property to prevent XSS (Cross-Site Scripting) attacks.
+* Using Angular's built-in sanitization functions to clean untrusted data.
+* Implementing proper authentication and authorization mechanisms.
+* Securing API endpoints and using HTTPS for communication.
+* Ensuring that sensitive data is not exposed in the code or through error messages.
+* Regularly updating dependencies to patch known vulnerabilities.
+
+==> Explain the concept of two-way data binding in Angular.
+*  Two-way data binding in Angular allows for synchronization between the model and the view. When the data in the model changes, the view is automatically updated, and when the user updates the view (e.g., through input fields), the model is updated as well. This is typically implemented using the ngModel directive in forms.
