@@ -1,0 +1,29 @@
+Angular project new repository:
+
+1. **Initialize Git in Your Project Directory**:
+   Open your terminal and navigate to your Angular project directory. Then, initialize Git:
+   ```bash
+   cd /path/to/your/angular/project
+   git init
+   ```
+
+2. **Add Your Remote Repository**:
+   Add the remote repository you created (assuming it's on GitHub):
+   ```bash
+   git remote add origin https://github.com/yourusername/angular17.git
+   ```
+
+3. **Add and Commit Your Project Files**:
+   Add all your project files to the staging area and commit them:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+4. **Push Your Project to the Repository**:
+   Push your committed files to the remote repository:
+   ```bash
+   git push -u origin master
+   ```
+
+This will upload your Angular project to the `angular17` repository. If you encounter any issues or need further assistance, feel free to ask!
