@@ -438,3 +438,36 @@ Security Best Practices
 *  Validating Origin Headers: On the server-side, validating that requests are coming from the expected origin.
 *  SameSite Cookies: Setting cookies with the SameSite attribute to prevent them from being sent on cross-site requests.
 *  Using Secure Cookies: Ensuring cookies are transmitted over HTTPS only.
+
+Content projection
+===================
+
+Content projection allows you to create flexible and reusable components in Angular by letting you insert content into them from outside. This means you can customize the look and feel of a component by providing different content.
+
+Here’s how it works:
+
+Create a Component: Define a component where you want to allow content projection.
+Use the ng-content Tag: Inside your component’s template, place the <ng-content></ng-content> tag where you want the projected content to appear.
+Project Content: When you use this component elsewhere, you can insert any content between the component’s opening and closing tags, and it will be projected into the place where the ng-content tag is.
+
+Example:
+HTML
+
+<!-- card.component.html -->
+<div class="card">
+  <ng-content></ng-content>
+</div>
+AI-generated code. Review and use carefully. More info on FAQ.
+When you use this CardComponent in another template, you can project content into it:
+
+HTML
+
+<!-- app.component.html -->
+<app-card>
+  <h2>Title</h2>
+  <p>This is some content inside the card.</p>
+</app-card>
+AI-generated code. Review and use carefully. More info on FAQ.
+In this example, the <h2> and <p> tags will be projected into the CardComponent where the ng-content tag is located.
+
+This makes your components highly configurable and reusable!
