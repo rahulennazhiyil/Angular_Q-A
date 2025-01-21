@@ -162,3 +162,237 @@ Implement try...catch blocks to handle errors.
 Modules:
 
 Use CommonJS or ES modules to organize code into separate files.
+
+Array Operators
+---------------
+JavaScript provides a rich set of **array methods** (operators) that allow developers to manipulate arrays in various ways. Here's a categorized list of the most commonly used methods:
+
+---
+
+## 1. **Adding and Removing Elements**
+
+### `push()`
+Adds one or more elements to the **end** of an array.
+```javascript
+const arr = [1, 2, 3];
+arr.push(4);
+console.log(arr); // [1, 2, 3, 4]
+```
+
+### `pop()`
+Removes the **last** element from an array and returns it.
+```javascript
+const arr = [1, 2, 3];
+const removed = arr.pop();
+console.log(removed); // 3
+console.log(arr); // [1, 2]
+```
+
+### `unshift()`
+Adds one or more elements to the **beginning** of an array.
+```javascript
+const arr = [2, 3];
+arr.unshift(1);
+console.log(arr); // [1, 2, 3]
+```
+
+### `shift()`
+Removes the **first** element from an array and returns it.
+```javascript
+const arr = [1, 2, 3];
+const removed = arr.shift();
+console.log(removed); // 1
+console.log(arr); // [2, 3]
+```
+
+### `splice()`
+Adds or removes elements at a specific index.
+```javascript
+const arr = [1, 2, 3, 4];
+arr.splice(1, 2, 99); // Remove 2 elements from index 1 and insert 99
+console.log(arr); // [1, 99, 4]
+```
+
+---
+
+## 2. **Iterating Over Arrays**
+
+### `forEach()`
+Executes a function for each element in the array.
+```javascript
+const arr = [1, 2, 3];
+arr.forEach((num) => console.log(num * 2));
+// Output: 2, 4, 6
+```
+
+---
+
+## 3. **Searching and Filtering**
+
+### `find()`
+Finds the **first** element that matches a condition.
+```javascript
+const arr = [1, 2, 3, 4];
+const found = arr.find(num => num > 2);
+console.log(found); // 3
+```
+
+### `filter()`
+Returns a new array with all elements that match a condition.
+```javascript
+const arr = [1, 2, 3, 4];
+const filtered = arr.filter(num => num > 2);
+console.log(filtered); // [3, 4]
+```
+
+### `includes()`
+Checks if an array contains a specific value.
+```javascript
+const arr = [1, 2, 3];
+console.log(arr.includes(2)); // true
+console.log(arr.includes(4)); // false
+```
+
+### `indexOf()`
+Finds the **first index** of a specific value (or `-1` if not found).
+```javascript
+const arr = [1, 2, 3, 2];
+console.log(arr.indexOf(2)); // 1
+```
+
+### `lastIndexOf()`
+Finds the **last index** of a specific value.
+```javascript
+const arr = [1, 2, 3, 2];
+console.log(arr.lastIndexOf(2)); // 3
+```
+
+---
+
+## 4. **Transforming Arrays**
+
+### `map()`
+Creates a new array by applying a function to each element.
+```javascript
+const arr = [1, 2, 3];
+const squared = arr.map(num => num * num);
+console.log(squared); // [1, 4, 9]
+```
+
+### `reduce()`
+Reduces the array to a single value by applying a function.
+```javascript
+const arr = [1, 2, 3, 4];
+const sum = arr.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 10
+```
+
+### `flat()`
+Flattens nested arrays to a specified depth.
+```javascript
+const arr = [1, [2, [3, [4]]]];
+console.log(arr.flat(2)); // [1, 2, 3, [4]]
+```
+
+### `flatMap()`
+Combines `map()` and `flat()` in one step.
+```javascript
+const arr = [1, 2, 3];
+const result = arr.flatMap(num => [num, num * 2]);
+console.log(result); // [1, 2, 2, 4, 3, 6]
+```
+
+---
+
+## 5. **Sorting and Reversing**
+
+### `sort()`
+Sorts the array (modifies the original array).
+```javascript
+const arr = [3, 1, 4, 1];
+arr.sort();
+console.log(arr); // [1, 1, 3, 4]
+```
+> **Tip**: Use a compare function for numeric sorting.
+
+### `reverse()`
+Reverses the order of elements in the array.
+```javascript
+const arr = [1, 2, 3];
+arr.reverse();
+console.log(arr); // [3, 2, 1]
+```
+
+---
+
+## 6. **Creating and Copying Arrays**
+
+### `slice()`
+Returns a shallow copy of a portion of an array.
+```javascript
+const arr = [1, 2, 3, 4];
+const sliced = arr.slice(1, 3);
+console.log(sliced); // [2, 3]
+```
+
+### `concat()`
+Merges two or more arrays into a new array.
+```javascript
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const merged = arr1.concat(arr2);
+console.log(merged); // [1, 2, 3, 4]
+```
+
+### `from()`
+Creates a new array from an iterable or array-like object.
+```javascript
+const str = "hello";
+const arr = Array.from(str);
+console.log(arr); // ['h', 'e', 'l', 'l', 'o']
+```
+
+### `of()`
+Creates an array from a set of arguments.
+```javascript
+const arr = Array.of(1, 2, 3);
+console.log(arr); // [1, 2, 3]
+```
+
+---
+
+## 7. **Checking Arrays**
+
+### `isArray()`
+Checks if a value is an array.
+```javascript
+console.log(Array.isArray([1, 2, 3])); // true
+console.log(Array.isArray("hello")); // false
+```
+
+---
+
+## 8. **Joining Arrays**
+
+### `join()`
+Joins array elements into a string.
+```javascript
+const arr = [1, 2, 3];
+const str = arr.join("-");
+console.log(str); // "1-2-3"
+```
+
+---
+
+### Summary Table of Array Methods:
+| Category             | Methods                                                              |
+|----------------------|----------------------------------------------------------------------|
+| **Adding/Removing**  | `push`, `pop`, `unshift`, `shift`, `splice`                         |
+| **Iterating**        | `forEach`                                                           |
+| **Searching**        | `find`, `filter`, `includes`, `indexOf`, `lastIndexOf`             |
+| **Transforming**     | `map`, `reduce`, `flat`, `flatMap`                                  |
+| **Sorting/Reversing**| `sort`, `reverse`                                                   |
+| **Creating/Copying** | `slice`, `concat`, `from`, `of`                                     |
+| **Checking**         | `isArray`                                                          |
+| **Joining**          | `join`                                                             |
+
