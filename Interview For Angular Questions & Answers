@@ -1,72 +1,99 @@
 Angular Interview Questions
 ---------------------------
 Basic Concepts
-What is Angular, and how is it different from AngularJS?
-What are the building blocks of Angular?
-Explain the difference between components and directives.
-What is data binding, and what are its types?
-What is the purpose of Angular CLI? Can you name some CLI commands?
-What is a TypeScript, and why is it used in Angular?
+* What is Angular, and how is it different from AngularJS?
+* What are the building blocks of Angular?
+* Explain the difference between components and directives.
+* What is data binding, and what are its types?
+* What is the purpose of Angular CLI? Can you name some CLI commands?
+* What is a TypeScript, and why is it used in Angular?
+
 Components and Templates
-What is a component? How do you create and use it?
-Explain the role of @Input() and @Output() decorators.
-What is the difference between template-driven forms and reactive forms?
-How do you handle events in Angular templates?
-What are lifecycle hooks? Can you name and explain their purposes?
-How would you implement conditional rendering in an Angular template?
+************************
+
+* What is a component? How do you create and use it?
+* Explain the role of @Input() and @Output() decorators.
+* What is the difference between template-driven forms and reactive forms?
+* How do you handle events in Angular templates?
+* What are lifecycle hooks? Can you name and explain their purposes?
+* How would you implement conditional rendering in an Angular template?
+
 Directives
-What are Angular directives, and how are they classified?
-What is the difference between structural and attribute directives?
-How do you create a custom directive?
-Explain the purpose of ngIf, ngFor, and ngClass.
-Services and Dependency Injection
-What is a service in Angular, and how do you create one?
-What is dependency injection, and how does Angular implement it?
-What is the purpose of a singleton service?
-Explain the difference between providedIn: 'root' and providing a service in a specific module.
+**********
+
+* What are Angular directives, and how are they classified?
+* What is the difference between structural and attribute directives?
+* How do you create a custom directive?
+* Explain the purpose of ngIf, ngFor, and ngClass.
+* Services and Dependency Injection
+* What is a service in Angular, and how do you create one?
+* What is dependency injection, and how does Angular implement it?
+* What is the purpose of a singleton service?
+* Explain the difference between providedIn: 'root' and providing a service in a specific module.
+
 Routing
-How does routing work in Angular?
-What is the purpose of RouterModule and Routes?
-How do you implement lazy loading in Angular?
-What are route guards, and what types of guards are available?
-How do you pass parameters in Angular routes?
+*******
+
+* How does routing work in Angular?
+* What is the purpose of RouterModule and Routes?
+* How do you implement lazy loading in Angular?
+* What are route guards, and what types of guards are available?
+* How do you pass parameters in Angular routes?
+
 Forms
-What is the difference between reactive forms and template-driven forms?
-How do you perform form validation in Angular?
-How do you bind form data to the component?
+*****
+
+* What is the difference between reactive forms and template-driven forms?
+* How do you perform form validation in Angular?
+* How do you bind form data to the component?
+
 HTTP and Observables
-How do you make HTTP requests in Angular?
-What is the purpose of the HttpClient module?
-What is an observable, and how is it used in Angular?
-What is the difference between Promise and Observable?
+********************
+
+* How do you make HTTP requests in Angular?
+* What is the purpose of the HttpClient module?
+* What is an observable, and how is it used in Angular?
+* What is the difference between Promise and Observable?
+
 Angular Modules
-What is the purpose of NgModules?
-Explain the difference between feature modules and shared modules.
-How do you organize an Angular application into modules?
+***************
+
+* What is the purpose of NgModules?
+* Explain the difference between feature modules and shared modules.
+* How do you organize an Angular application into modules?
+
 Performance and Optimization
-What is AOT (Ahead-of-Time) compilation, and why is it important?
-How does Angular handle tree shaking?
-What are some ways to optimize an Angular application?
+****************************
+
+* What is AOT (Ahead-of-Time) compilation, and why is it important?
+* How does Angular handle tree shaking?
+* What are some ways to optimize an Angular application?
+
 Miscellaneous
-What are Angular Pipes? How do you create a custom pipe?
-What is the difference between Angular’s ngOnInit and constructor?
-What is the purpose of Angular’s zone.js?
-What are interceptors, and how are they used in Angular?
-Explain the role of Change Detection in Angular.
-What is the role of the trackBy function in ngFor?
+*************
+
+* What are Angular Pipes? How do you create a custom pipe?
+* What is the difference between Angular’s ngOnInit and constructor?
+* What is the purpose of Angular’s zone.js?
+* What are interceptors, and how are they used in Angular?
+* Explain the role of Change Detection in Angular.
+* What is the role of the trackBy function in ngFor?
+
 Practical Scenarios
-How would you debug an Angular application?
-How would you handle a slow-loading Angular application?
-Describe a project you worked on and your role in the team.
-How do you manage version control in Angular projects?
-Would you like me to create short notes or examples for any of these topics?
+*******************
 
-Here are comprehensive answers to all the Angular interview questions you listed, organized by topic:
+* How would you debug an Angular application?
+* How would you handle a slow-loading Angular application?
+* Describe a project you worked on and your role in the team.
+* How do you manage version control in Angular projects?
+* Would you like me to create short notes or examples for any of these topics?
+
+=> Here are comprehensive answers to all the Angular interview questions you listed, organized by topic:
 Basic Concepts
-What is Angular, and how is it different from AngularJS?
+* What is Angular, and how is it different from AngularJS?
 
-Angular is a TypeScript-based front-end framework for building dynamic single-page applications. AngularJS (v1.x) is based on JavaScript and uses a two-way binding architecture. Angular offers improved performance with Ahead-of-Time (AOT) compilation, component-based architecture, and dependency injection.
-What are the building blocks of Angular?
+* Angular is a TypeScript-based front-end framework for building dynamic single-page applications. AngularJS (v1.x) is based on JavaScript and uses a two-way binding architecture. Angular offers improved performance with Ahead-of-Time (AOT) compilation, component-based architecture, and dependency injection.
+* What are the building blocks of Angular?
 
 The primary building blocks of Angular are:
 Modules (e.g., NgModules)
