@@ -741,5 +741,19 @@ Here are some key points about Subjects in Angular:
 4. **AsyncSubject**: This type of Subject emits the last value to its subscribers when the Observable completes.
 
 Subjects are often used for scenarios like event handling, state management, and communication between components.
+-----
+-----
+In Angular, polyfills are used to ensure that your application works consistently across different browsers, including older ones that may not support modern JavaScript features. When you create a new Angular project, the Angular CLI automatically includes a `src/polyfills.ts` file where you can add polyfills as needed.
+
+Here are some key points about polyfills in Angular:
+
+1. **Default Polyfills**: Angular includes some default polyfills to handle common compatibility issues. For example, it includes polyfills for ES6 features like Promises and Symbol.
+
+2. **Zone.js**: One of the most important polyfills in Angular is Zone.js. It is crucial for Angular's change detection mechanism, allowing Angular to track and manage asynchronous operations like HTTP requests and user interactions[1](https://dev.to/chintanonweb/understanding-angular-polyfills-and-the-role-of-zonejs-48mi).
+
+3. **Custom Polyfills**: If your application requires additional polyfills, you can add them to the `src/polyfills.ts` file. For example, you might add polyfills for specific browser APIs that your application uses[2](https://angular.io/guide/browser-support).
+
+4. **Browser Support**: Polyfills help ensure that your Angular application runs smoothly on a wide range of browsers, including older versions of Chrome, Firefox, Edge, Safari, and Internet Explorer[2](https://angular.io/guide/browser-support).
+
 
 
