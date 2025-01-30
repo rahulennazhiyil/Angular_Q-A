@@ -728,3 +728,18 @@ Here’s a set of **interview questions and answers** tailored for **2+ years of
 
 ---
 
+In Angular, a **Subject** is a special type of Observable provided by the RxJS library. It acts as both an Observable and an Observer, meaning it can emit values to its subscribers and also subscribe to other Observables.
+
+Here are some key points about Subjects in Angular:
+
+1. **Multicasting**: Subjects can multicast to multiple Observers. This means that when a Subject emits a value, all its subscribers receive that value.
+
+2. **BehaviorSubject**: A type of Subject that requires an initial value and emits its current value to new subscribers.
+
+3. **ReplaySubject**: This type of Subject can replay a specified number of previous emissions to new subscribers.
+
+4. **AsyncSubject**: This type of Subject emits the last value to its subscribers when the Observable completes.
+
+Subjects are often used for scenarios like event handling, state management, and communication between components.
+
+
