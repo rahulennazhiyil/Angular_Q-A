@@ -471,3 +471,260 @@ AI-generated code. Review and use carefully. More info on FAQ.
 In this example, the <h2> and <p> tags will be projected into the CardComponent where the ng-content tag is located.
 
 This makes your components highly configurable and reusable!
+
+Here’s a set of **interview questions and answers** tailored for **2+ years of experience in Angular development**. These questions cover fundamental concepts, intermediate-level topics, and practical scenarios to assess the candidate's knowledge and skills.
+
+---
+
+### **1. Core Angular Concepts**
+
+#### **Q1: What is Angular, and how does it differ from AngularJS?**
+**Answer:**
+- **Angular** is a TypeScript-based open-source web application framework led by Google. It’s a complete rewrite of AngularJS and is component-based.
+- **Key Differences:**
+  - Angular uses **TypeScript**, while AngularJS uses JavaScript.
+  - Angular uses a **component-based architecture**, whereas AngularJS uses a **controller-based architecture**.
+  - Angular has a **hierarchical dependency injection system**, while AngularJS has a single injector.
+  - Angular supports **mobile development** and has better performance due to its use of **ahead-of-time (AOT) compilation**.
+
+---
+
+#### **Q2: Explain the difference between Angular’s `ngOnInit` and `constructor`.**
+**Answer:**
+- **Constructor**:
+  - A default method in TypeScript classes.
+  - Used for dependency injection and initializing class members.
+  - Called when the class is instantiated.
+- **ngOnInit**:
+  - A lifecycle hook provided by Angular.
+  - Called after Angular has initialized all data-bound properties.
+  - Used for initialization logic (e.g., API calls, setting up subscriptions).
+
+---
+
+#### **Q3: What is the purpose of Angular modules (`NgModule`)?**
+**Answer:**
+- Angular modules (`NgModule`) are used to organize an application into cohesive blocks of functionality.
+- They declare components, directives, pipes, and services and make them available to other parts of the application.
+- Example:
+  ```typescript
+  @NgModule({
+    declarations: [AppComponent],
+    imports: [BrowserModule, FormsModule],
+    providers: [MyService],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule {}
+  ```
+
+---
+
+### **2. Intermediate Angular Concepts**
+
+#### **Q4: What is lazy loading in Angular, and how do you implement it?**
+**Answer:**
+- **Lazy loading** is a technique to load feature modules on demand, improving application performance by reducing the initial load time.
+- Implementation:
+  - Use the `loadChildren` property in the routing configuration:
+    ```typescript
+    const routes: Routes = [
+      { path: 'feature', loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule) }
+    ];
+    ```
+
+---
+
+#### **Q5: How does Angular handle change detection?**
+**Answer:**
+- Angular uses a **change detection mechanism** to detect changes in the application state and update the DOM.
+- It works in two modes:
+  - **Default Change Detection**: Checks all components for changes on every event (e.g., click, API response).
+  - **OnPush Change Detection**: Only checks a component if its `@Input` properties change or an event is triggered within the component.
+- Example:
+  ```typescript
+  @Component({
+    selector: 'app-example',
+    templateUrl: './example.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
+  })
+  ```
+
+---
+
+#### **Q6: What are Angular pipes, and how do you create a custom pipe?**
+**Answer:**
+- **Pipes** are used to transform data in templates (e.g., formatting dates, currency, etc.).
+- To create a custom pipe:
+  ```typescript
+  import { Pipe, PipeTransform } from '@angular/core';
+
+  @Pipe({ name: 'customPipe' })
+  export class CustomPipe implements PipeTransform {
+    transform(value: string): string {
+      return value.toUpperCase();
+    }
+  }
+  ```
+- Usage in template:
+  ```html
+  <p>{{ 'hello' | customPipe }}</p> <!-- Output: HELLO -->
+  ```
+
+---
+
+### **3. Advanced Angular Concepts**
+
+#### **Q7: What is Angular’s dependency injection (DI), and how does it work?**
+**Answer:**
+- **Dependency Injection (DI)** is a design pattern in which a class receives its dependencies from an external source rather than creating them itself.
+- In Angular, DI is used to inject services, components, or other dependencies into a class.
+- Example:
+  ```typescript
+  @Injectable({
+    providedIn: 'root' // Service is provided at the root level
+  })
+  export class MyService {}
+
+  @Component({
+    selector: 'app-example',
+    templateUrl: './example.component.html'
+  })
+  export class ExampleComponent {
+    constructor(private myService: MyService) {}
+  }
+  ```
+
+---
+
+#### **Q8: How do you optimize the performance of an Angular application?**
+**Answer:**
+- **Performance Optimization Techniques**:
+  - Use **lazy loading** for feature modules.
+  - Enable **AOT compilation** for faster rendering.
+  - Use **OnPush change detection** to reduce unnecessary checks.
+  - Minimize the use of heavy libraries and optimize bundle size using tools like **Webpack**.
+  - Use **trackBy** in `ngFor` to avoid re-rendering the entire list.
+  - Implement **caching** for API responses.
+
+---
+
+#### **Q9: What is the difference between `@ViewChild` and `@ContentChild`?**
+**Answer:**
+- **@ViewChild**:
+  - Used to access a child component, directive, or DOM element within the same template.
+  - Example:
+    ```typescript
+    @ViewChild('myElement') myElement: ElementRef;
+    ```
+- **@ContentChild**:
+  - Used to access content projected into a component via `<ng-content>`.
+  - Example:
+    ```typescript
+    @ContentChild('projectedContent') projectedContent: ElementRef;
+    ```
+
+---
+
+### **4. Practical Scenarios**
+
+#### **Q10: How would you handle errors in an Angular application?**
+**Answer:**
+- Use **HTTP Interceptors** to handle global HTTP errors.
+- Example:
+  ```typescript
+  @Injectable()
+  export class ErrorInterceptor implements HttpInterceptor {
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+      return next.handle(req).pipe(
+        catchError(error => {
+          console.error('Error occurred:', error);
+          return throwError(error);
+        })
+      );
+    }
+  }
+  ```
+- Register the interceptor in the `providers` array:
+  ```typescript
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  ]
+  ```
+
+---
+
+#### **Q11: How do you implement authentication and route guards in Angular?**
+**Answer:**
+- Use **route guards** to protect routes based on user authentication.
+- Example:
+  ```typescript
+  @Injectable({ providedIn: 'root' })
+  export class AuthGuard implements CanActivate {
+    constructor(private authService: AuthService, private router: Router) {}
+
+    canActivate(): boolean {
+      if (this.authService.isLoggedIn()) {
+        return true;
+      } else {
+        this.router.navigate(['/login']);
+        return false;
+      }
+    }
+  }
+  ```
+- Apply the guard to a route:
+  ```typescript
+  const routes: Routes = [
+    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
+  ];
+  ```
+
+---
+
+#### **Q12: How do you share data between components in Angular?**
+**Answer:**
+- **Parent to Child**: Use `@Input` to pass data.
+- **Child to Parent**: Use `@Output` with `EventEmitter`.
+- **Between Sibling Components**: Use a shared service with `BehaviorSubject`.
+- Example of shared service:
+  ```typescript
+  @Injectable({ providedIn: 'root' })
+  export class DataService {
+    private dataSubject = new BehaviorSubject<string>('');
+    data$ = this.dataSubject.asObservable();
+
+    setData(data: string) {
+      this.dataSubject.next(data);
+    }
+  }
+  ```
+
+---
+
+### **5. Testing in Angular**
+
+#### **Q13: How do you write unit tests for an Angular component?**
+**Answer:**
+- Use **Jasmine** and **Karma** for unit testing.
+- Example:
+  ```typescript
+  describe('ExampleComponent', () => {
+    let component: ExampleComponent;
+    let fixture: ComponentFixture<ExampleComponent>;
+
+    beforeEach(() => {
+      TestBed.configureTestingModule({
+        declarations: [ExampleComponent]
+      });
+      fixture = TestBed.createComponent(ExampleComponent);
+      component = fixture.componentInstance;
+    });
+
+    it('should create the component', () => {
+      expect(component).toBeTruthy();
+    });
+  });
+  ```
+
+---
+
