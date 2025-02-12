@@ -1,17 +1,20 @@
 Mastering Angular Structural Elements and Directives
+----------------------------------------------------
 Angular is a powerful framework that offers various tools to enhance the UI and manage the DOM effectively. In this blog, we will cover the following concepts in detail with beginner-friendly examples and outputs:
 
-ng-template
-ng-container
-ng-content
-ElementRef
-TemplateRef
-ViewContainerRef
-ngTemplateOutlet
-Custom Directives
-Renderer2
-Structural Directives (*ngIf, *ngFor, etc.)
+* ng-template
+* ng-container
+* ng-content
+* ElementRef
+* TemplateRef
+* ViewContainerRef
+* ngTemplateOutlet
+* Custom Directives
+* Renderer2
+* Structural Directives (*ngIf, *ngFor, etc.)
+
 1. ng-template
+--------------
 The ng-template directive is used to define a reusable and non-rendered block of HTML until explicitly invoked. It is highly versatile and works with structural directives, custom directives, and dynamic content rendering. It is also instrumental in creating reusable components.
 
 Advanced Use Cases
@@ -25,7 +28,9 @@ You can define templates for conditional rendering directly within an ngIf direc
 <ng-template #loginTemplate>
   <p>Please log in to continue.</p>
 </ng-template>
+
 2. Reusable Components
+----------------------
 ng-template allows for content reuse in dynamic components. Here's an example:
 
 Parent Component:
@@ -51,7 +56,9 @@ import { Component, Input, TemplateRef } from '@angular/core';
 export class MessageComponent {
   @Input() template!: TemplateRef<any>;
 }
+
 3. Dynamic Context Passing
+--------------------------
 With ngTemplateOutletContext, you can pass data dynamically to templates, enabling more flexible logic.
 
 <ng-template #greeting let-name="name">
@@ -59,7 +66,9 @@ With ngTemplateOutletContext, you can pass data dynamically to templates, enabli
 </ng-template>
 
 <ng-container *ngTemplateOutlet="greeting; context: { name: 'Angular Developer' }"></ng-container>
+
 4. Usage in Custom Directives
+-----------------------------
 You can combine ng-template with custom structural directives to create powerful DOM transformations. For instance, rendering templates conditionally:
 
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
@@ -122,7 +131,9 @@ No content to show!
 When showContent is true:
 
 Content is shown!
+
 2. ng-container
+---------------
 The ng-container is a grouping element that doesn't render an additional DOM element. It is used to group elements logically and apply directives without affecting the DOM structure.
 
 Use Cases
@@ -141,6 +152,7 @@ Welcome, user!
 If isLoggedIn is false, no output is rendered.
 
 3. ng-content
+-------------
 The ng-content directive is used to project content into a component from its parent. It enables developers to create highly customizable and reusable components.
 
 Use Cases
@@ -162,7 +174,9 @@ Output
 <div class="card">
   <p>Content to be projected</p>
 </div>
+
 4. ElementRef
+-------------
 ElementRef is used to directly access and manipulate DOM elements. Use it cautiously, as improper usage can lead to security risks like XSS.
 
 Use Cases
@@ -188,6 +202,7 @@ Output
 The button will have a blue background color.
 
 5. TemplateRef
+--------------
 TemplateRef represents an embedded template. It is used to work with structural directives or programmatically render templates.
 
 Use Cases
@@ -211,7 +226,9 @@ export class AppComponent {
 
   constructor() {}
 }
+
 6. ViewContainerRef
+-------------------
 ViewContainerRef is used to dynamically insert templates or components into the DOM at runtime.
 
 Use Cases
@@ -240,7 +257,9 @@ export class AppComponent {
     this.vcr.createEmbeddedView(this.template);
   }
 }
+
 7. ngTemplateOutlet
+-------------------
 ngTemplateOutlet allows you to render an ng-template programmatically. It simplifies template management and reuse, and provides powerful options for passing data to templates dynamically.
 
 Use Cases
@@ -311,6 +330,7 @@ Output
 This is Template 1
 
 8. Custom Directives
+--------------------
 Directives extend the behavior of elements or components. Below is an example of a directive that changes the background color of an element.
 
 Use Cases
@@ -336,6 +356,7 @@ export class HighlightDirective {
     this.renderer.removeStyle(this.el.nativeElement, 'background-color');
   }
 }
+
 Usage
 <p appHighlight>Hover over me to highlight!</p>
 Output
@@ -360,10 +381,12 @@ export class IfDirective {
     }
   }
 }
+
 Usage
 <div *appIf="isVisible">This content is conditionally visible!</div>
 Component Code
 isVisible = true;
+
 Output
 If isVisible is true, the content will be rendered:
 
@@ -398,6 +421,7 @@ Output
 The background of the paragraph changes to yellow when hovered over.
 
 9. Renderer2
+------------
 Renderer2 is a service used for safely manipulating the DOM. It is a preferred alternative to ElementRef for DOM interactions.
 
 Use Cases
