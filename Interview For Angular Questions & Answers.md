@@ -365,6 +365,100 @@ it('should fetch data', () => {
 - Run unit tests and e2e tests after each upgrade
 - Refactor deprecated APIs gradually
 
+
+## What are the major updates in Angular 19?
+The major updates done in the Angular 19 are:
+
+- Standalone Components: In Angular 19, components, directives, and pipes are standalone by default, making development easier and reducing reliance on NgModules. The ng update command helps migrate older projects.
+Improved Rendering: Angular now supports incremental hydration (still in preview), offering better control over when and how parts of the application are rendered, enhancing performance.
+- Route-Level Render Mode: Developers can customize rendering strategies for different routes to improve performance and SEO.
+State Management & Async Enhancements: New features like linked signals and the resource API improve state management and make handling asynchronous operations smoother.
+- Code and Performance Improvements: Updates like automatic detection of unused imports, Hot Module Replacement (HMR), zoneless change detection (in development), automatic CSP generation, and Angular Material enhancements help streamline development and improve performance.
+
+## What is Difference between Angular 18 and Angular 19?
+- Angular 19 offers better performance, easier component management, and improved features for developers.
+
+Feature
+
+Angular 18
+
+Angular 19
+
+Standalone Components
+
+Components still need NgModules.
+
+Components are standalone by default, no need for NgModules.
+
+Routing and SEO
+
+Basic routing optimizations.
+
+Different routes can have different rendering methods, improving performance and SEO.
+
+Performance
+
+Improved performance but limited control.
+
+More control over app rendering for better performance (like Incremental Hydration).
+
+State Management
+
+Basic state management tools.
+
+New tools (Linked Signals, Resource API) for better managing async operations.
+
+Unused Imports
+
+You need to check and remove unused imports manually.
+
+Automatically finds and reports unused imports.
+
+## Why Angular was introduced?
+- Angular was introduced to simplify the development of dynamic, single-page applications (SPAs). It offers features like two-way data binding, component-based architecture, and dependency injection, making it easier to manage large applications. Angular also supports cross-platform development, improving code maintainability, performance, and reducing development time for web, mobile, and desktop apps.
+
+## How many types of compilation Angular provides?
+Angular provides two types of compilation:
+
+JIT (Just-in-Time) Compilation:
+
+Happens at runtime in the browser.
+Compiles the Angular application in the browser as it loads.
+Faster development builds but slower performance in production.
+AOT (Ahead-of-Time) Compilation:
+
+Happens during the build phase before the application is run.
+Compiles the application into efficient JavaScript code ahead of time, which leads to faster loading and better performance.
+Recommended for production builds.
+In JIT compilation, the application compiles inside the browser during runtime. 
+AOT compilation, the application compiles during the build time.
+
+## What is a component in Angular?
+- A component is a fundamental building block of Angular applications. It controls a part of the user interface and manages the data and logic for that section. Components are used to create reusable UI elements and define the structure and behavior of the app.
+
+```
+import { Component, Input } from '@angular/core';
+
+@Component({
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
+})
+export class HeaderComponent {
+    @Input() title: string;
+    @Input() links: { name: string, url: string }[];
+
+    constructor() { }
+}
+```
+
+## Explain the purpose of @Component decorator in Angular.
+- Defining the Component: It designates a class as an Angular component and provides metadata about the component.
+- Template Association: Links the component with its HTML template, defining the view.
+- Style Binding: Associates the component with its CSS styles to encapsulate and manage styling.
+Selector Definition: Defines a custom HTML tag (selector) that represents the component in the application.
+-Dependency Injection Configuration: Specifies the providers for the component, providing dependency injection.
+
 ---
 
 ## 📚 Additional Resources
