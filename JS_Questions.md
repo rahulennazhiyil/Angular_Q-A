@@ -396,3 +396,65 @@ console.log(str); // "1-2-3"
 | **Checking**         | `isArray`                                                          |
 | **Joining**          | `join`                                                             |
 
+
+
+## Basic JavaScript Questions
+**1. Check if a string is a palindrome**
+
+javascript
+Copy
+Edit
+function isPalindrome(str) {
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+console.log(isPalindrome("madam")); // true
+console.log(isPalindrome("hello")); // false
+
+**2. Difference between var, let, and const**
+var is function-scoped and can be redeclared.
+let is block-scoped and cannot be redeclared.
+const is block-scoped but cannot be reassigned.
+Example:
+
+javascript
+Copy
+Edit
+var a = 10;
+let b = 20;
+const c = 30;
+
+**3. Sort an array of numbers in ascending order**
+javascript
+Copy
+Edit
+const numbers = [5, 3, 8, 1];
+numbers.sort((a, b) => a - b);
+console.log(numbers); // [1, 3, 5, 8]
+
+**4. Remove duplicates from an array**
+javascript
+Copy
+Edit
+const removeDuplicates = (arr) => [...new Set(arr)];
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // [1, 2, 3, 4, 5]
+
+## Intermediate JavaScript Questions
+
+**5. Factorial using recursion**
+javascript
+Copy
+Edit
+function factorial(n) {
+    return n === 0 ? 1 : n * factorial(n - 1);
+}
+console.log(factorial(5)); // 120
+
+**6. Flatten a nested array**
+javascript
+Copy
+Edit
+function flattenArray(arr) {
+    return arr.flat(Infinity);
+}
+console.log(flattenArray([1, [2, [3, [4]]]])); // [1, 2, 3, 4]
